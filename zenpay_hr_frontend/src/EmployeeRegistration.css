@@ -1,0 +1,19 @@
+.employee-registration {
+  background-color: #1a202c; /* fundo escuro */
+  color: white; /* texto branco */
+  padding: 32px; /* espaçamento interno */
+  border-radius: 8px; /* cantos arredondados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* sombra */
+}
+
+.employee-registration .form-control {
+  margin-bottom: 16px; /* espaçamento entre campos */
+}
+
+.employee-registration label {
+  font-weight: bold; /* texto em negrito para rótulos */
+}
+
+#department, #workShift, #workSchedule, #contract:hover {
+  cursor: pointer;
+}
