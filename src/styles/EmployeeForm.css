@@ -1,0 +1,25 @@
+.employee-form {
+  padding: 16px;
+  background-color: #1a202c; /* Fundo escuro */
+  color: white; /* Texto branco */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.employee-form .form-control {
+  margin-bottom: 16px; /* Espaçamento entre os campos */
+}
+
+.employee-form label {
+  font-weight: bold;
+}
+
+.employee-form input, .employee-form select {
+  background-color: #2d3748; /* Fundo dos campos */
+  color: white; /* Texto dos campos */
+  border: 1px solid #4a5568; /* Borda dos campos */
+}
+
+.employee-form input::placeholder {
+  color: #a0aec0; /* Cor do placeholder */
+}

@@ -11,14 +11,14 @@ const theme = extendTheme({
   },
   colors: {
     purple: {
-      500: '#9b59b6',
+      700: '#9b59b6',
     },
     black: {
       500: '#111',
     },
     white: {
       500: '#fff',
-    },
+    }
   },
 });
 

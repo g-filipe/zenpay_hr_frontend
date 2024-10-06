@@ -1,0 +1,12 @@
+.employee-modal {
+  padding: 16px;
+}
+
+.employee-modal .modal-header {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.employee-modal .modal-footer {
+  padding: 16px;
+}

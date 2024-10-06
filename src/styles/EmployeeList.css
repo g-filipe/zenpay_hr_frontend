@@ -1,0 +1,26 @@
+.employee-list {
+  margin-top: 32px;
+}
+
+.employee-list .employee-item {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.employee-list .employee-item .employee-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employee-list .employee-item .employee-details {
+  margin-top: 8px;
+  display: flex;
+  gap: 32px;
+}
+
+.employee-list .employee-item .employee-details strong {
+  font-weight: bold;
+}
