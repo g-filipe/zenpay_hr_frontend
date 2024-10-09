@@ -1,13 +1,13 @@
 .employee-form {
   padding: 16px;
-  background-color: #1a202c; /* Fundo escuro */
-  color: white; /* Texto branco */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+  background-color: #1a202c;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .employee-form .form-control {
-  margin-bottom: 16px; /* Espaçamento entre os campos */
+  margin-bottom: 16px;
 }
 
 .employee-form label {
@@ -15,11 +15,11 @@
 }
 
 .employee-form input, .employee-form select {
-  background-color: #2d3748; /* Fundo dos campos */
-  color: white; /* Texto dos campos */
-  border: 1px solid #4a5568; /* Borda dos campos */
+  background-color: #2d3748;
+  color: white;
+  border: 1px solid #4a5568;
 }
 
 .employee-form input::placeholder {
-  color: #a0aec0; /* Cor do placeholder */
+  color: #a0aec0;
 }

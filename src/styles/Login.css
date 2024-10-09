@@ -1,18 +1,18 @@
 .login-form {
-  background-color: #1a202c; /* Fundo escuro */
-  color: white; /* Texto branco */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+  background-color: #1a202c;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .login-form input {
-  background-color: #2d3748; /* Fundo dos campos */
-  color: white; /* Texto dos campos */
-  border: 1px solid #4a5568; /* Borda dos campos */
+  background-color: #2d3748;
+  color: white;
+  border: 1px solid #4a5568; 
 }
 
 .login-form input::placeholder {
-  color: #a0aec0; /* Cor do placeholder */
+  color: #a0aec0;
 }
 
 .login-form h1 {

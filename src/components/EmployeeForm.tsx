@@ -44,7 +44,7 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ onSubmit }) => {
 
   return (
     <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-      {/* Nome */}
+
       <GridItem colSpan={[2, 1]}>
         <FormControl id="nome">
           <FormLabel>Nome</FormLabel>
@@ -52,7 +52,6 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ onSubmit }) => {
         </FormControl>
       </GridItem>
 
-      {/* CPF */}
       <GridItem colSpan={[2, 1]}>
         <FormControl id="cpf">
           <FormLabel>CPF</FormLabel>
@@ -60,7 +59,6 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ onSubmit }) => {
         </FormControl>
       </GridItem>
 
-      {/* Setor */}
       <GridItem colSpan={[2, 1]}>
         <FormControl id="setor">
           <FormLabel>Setor</FormLabel>
@@ -77,7 +75,6 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ onSubmit }) => {
         </FormControl>
       </GridItem>
 
-      {/* Jornada */}
       <GridItem colSpan={[2, 1]}>
         <FormControl id="jornada">
           <FormLabel>Jornada</FormLabel>
@@ -88,7 +85,6 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ onSubmit }) => {
         </FormControl>
       </GridItem>
 
-      {/* Escala */}
       <GridItem colSpan={[2, 1]}>
         <FormControl id="escala">
           <FormLabel>Escala</FormLabel>
@@ -99,7 +95,6 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ onSubmit }) => {
         </FormControl>
       </GridItem>
 
-      {/* Contrato */}
       <GridItem colSpan={[2, 1]}>
         <FormControl id="contrato">
           <FormLabel>Contrato</FormLabel>
@@ -111,7 +106,7 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ onSubmit }) => {
       </GridItem>
 
       <GridItem colSpan={2}>
-        <Button colorScheme="purple" onClick={handleSubmit} width="full">
+        <Button style={{ marginTop: '10px' }} colorScheme="purple" onClick={handleSubmit} width="full">
           Cadastrar Funcionário
         </Button>
       </GridItem>

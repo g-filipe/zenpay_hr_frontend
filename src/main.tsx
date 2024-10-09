@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from './App';
 import Login from '../src/components/Login';
 import Alimentacao from '../src/components/Alimentacao'
+import Relatorio from '../src/components/Relatorio'
 import './index.css';
 
 const theme = extendTheme({
@@ -32,7 +33,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/cadastro" element={<App />} />
-          <Route path="/alimentacao" element={<Alimentacao />} /> {/* Nova rota */}
+          <Route path="/alimentacao" element={<Alimentacao />} />
+          <Route path="/relatorios" element={<Relatorio />} />
         </Routes>
       </Router>
     </ChakraProvider>

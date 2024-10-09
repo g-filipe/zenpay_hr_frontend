@@ -1,28 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 header {
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 10vh;
+  background-color: rgba#1A202C;
+  box-shadow: 2px 2px 10px rgba(0,0,0, 0.363);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
 }
 
-/* Menu entre logo e botão */
 .header-menu {
   flex-grow: 1;
   display: flex;
   justify-content: flex-start;
+  
 }
 
-.header-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  margin-left: 20px;
-  transition: color 0.3s ease;
-}
+.menu-item {
+  padding: 0.6rem 1.5rem 0.6rem;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color:rgb(230, 230, 237);
 
-.header-menu a:hover {
-  color: #830AD1; /* Efeito hover */
-  cursor: pointer;
+}
+.menu-item:hover {
+  border: solid 1px transparent;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0, 0.2);
 }

@@ -1,9 +1,9 @@
-import { Box, Button, useDisclosure, useToast } from '@chakra-ui/react';
-import React, { useState } from 'react';
-import EmployeeList from './components/EmployeeList';
-import EmployeeModal from './components/EmployeeModal';
-import Header from './components/Header'; // Importando o Header
-import Logo from './components/Logo'; // Importando a Logo
+import { Box, Button, useDisclosure, useToast } from "@chakra-ui/react";
+import React, { useState } from "react";
+import EmployeeList from "./components/EmployeeList";
+import EmployeeModal from "./components/EmployeeModal";
+import Header from "./components/Header";
+import "./App.css";
 
 interface Employee {
   nome: string;
@@ -22,23 +22,28 @@ const App: React.FC = () => {
   const handleAddEmployee = (newEmployee: Employee) => {
     setEmployees([...employees, newEmployee]);
     toast({
-      title: 'Funcionário registrado.',
+      title: "Funcionário registrado.",
       description: `Funcionário ${newEmployee.nome} foi registrado com sucesso.`,
-      status: 'success',
+      status: "success",
       duration: 5000,
-      isClosable: true
+      isClosable: true,
     });
     onClose();
   };
 
   return (
-    <Box maxW="800px" mx="auto" mt={4}>
-      <Logo /> {/* Adicionando o componente Logo */}
-      <Header /> {/* Adicionando o componente Header */}
-      <Button colorScheme="purple" onClick={onOpen} position="absolute" top={4} right={4}>
-        Novo Funcionário
-      </Button>
-      <EmployeeModal isOpen={isOpen} onClose={onClose} onSubmit={handleAddEmployee} />
+    <Box maxW="100%" mx="auto">
+      <Header />
+      <div className="newEmployeeBtn">
+        <Button className="newEmployee" colorScheme="purple" onClick={onOpen}>
+          Novo Funcionário
+        </Button>
+      </div>
+      <EmployeeModal
+        isOpen={isOpen}
+        onClose={onClose}
+        onSubmit={handleAddEmployee}
+      />
       <EmployeeList employees={employees} />
     </Box>
   );

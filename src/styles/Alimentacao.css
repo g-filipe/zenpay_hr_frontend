@@ -1,12 +1,11 @@
-/* Alimentacao.css */
 .alimentacao-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #1a202c; /* Cor de fundo próxima à do layout geral */
+  background-color: #1a202c;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
-  color: white; /* Texto em branco */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 .alimentacao-title {

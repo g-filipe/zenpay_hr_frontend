@@ -1,16 +1,16 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import Header from './Header';
 
-const Alimentacao: React.FC = () => {
+const Relatorio: React.FC = () => {
   return (
     <Box maxW="100%" mx="auto">
       <Header />
       <Heading as="h1" size="lg" mb={4} style={{marginTop:"3%"}}>
-        Benefícios de Alimentação
+        Relatórios de Pagamento
       </Heading>
-      <Text style={{marginTop:"3%"}}>Aqui você encontrará informações sobre os benefícios de Vale Alimentação e Vale Refeição.</Text>
+      <Text style={{marginTop:"3%"}}>Aqui você encontrará informações sobre os pagamentos de va/vr, comissões, bônus.</Text>
     </Box>
   );
 };
 
-export default Alimentacao;
+export default Relatorio;

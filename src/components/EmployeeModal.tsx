@@ -1,4 +1,4 @@
-import { Modal, ModalOverlay, ModalContent, /*ModalHeader,*/ ModalCloseButton, ModalBody, ModalFooter, Button } from '@chakra-ui/react';
+import { Modal, ModalOverlay, ModalContent, /*ModalHeader,*/ ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react';
 import React from 'react';
 import EmployeeForm from './EmployeeForm';
 import { Employee } from './EmployeeForm'
@@ -15,15 +15,11 @@ const EmployeeModal: React.FC<EmployeeModalProps> = ({ isOpen, onClose, onSubmit
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-     
         <ModalCloseButton />
-        <ModalBody>
+        <ModalBody style={{ paddingTop: '40px' }}>
           <EmployeeForm onSubmit={onSubmit} />
         </ModalBody>
         <ModalFooter>
-          <Button colorScheme="purple" width="full" onClick={onClose}>
-            Cadastrar
-          </Button>
         </ModalFooter>
       </ModalContent>
     </Modal>

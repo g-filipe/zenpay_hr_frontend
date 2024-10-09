@@ -1,8 +1,7 @@
 import { Box, Button, FormControl, FormLabel, Input, Heading, Flex } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../components/Logo'; // Importando a Logo
-import '../styles/Login.css';
+import Logo from '../components/Logo';
 
 const Login: React.FC = () => {
   const [loginData, setLoginData] = useState({ username: '', password: '' });
@@ -14,9 +13,8 @@ const Login: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    // Simulação de login bem-sucedido
     if (loginData.username === 'user' && loginData.password === 'password') {
-      navigate('/cadastro'); // Redirecionar para a página de cadastro
+      navigate('/cadastro');
     } else {
       alert('Credenciais inválidas');
     }
@@ -25,7 +23,7 @@ const Login: React.FC = () => {
   return (
     
     <Flex height="100vh" alignItems="center" justifyContent="center">
-      <Logo /> {/* Adicionando o componente Logo */}
+      <Logo />
       <Box className="login-form" p={8} maxW="400px" borderWidth="1px" borderRadius="md">
         <Heading as="h1" size="lg" mb={6} textAlign="center">
           Login
