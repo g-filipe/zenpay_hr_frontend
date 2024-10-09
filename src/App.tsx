@@ -2,6 +2,8 @@ import { Box, Button, useDisclosure, useToast } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import EmployeeList from './components/EmployeeList';
 import EmployeeModal from './components/EmployeeModal';
+import Header from './components/Header'; // Importando o Header
+import Logo from './components/Logo'; // Importando a Logo
 
 interface Employee {
   nome: string;
@@ -31,6 +33,8 @@ const App: React.FC = () => {
 
   return (
     <Box maxW="800px" mx="auto" mt={4}>
+      <Logo /> {/* Adicionando o componente Logo */}
+      <Header /> {/* Adicionando o componente Header */}
       <Button colorScheme="purple" onClick={onOpen} position="absolute" top={4} right={4}>
         Novo Funcionário
       </Button>

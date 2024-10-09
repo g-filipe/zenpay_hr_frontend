@@ -1,0 +1,9 @@
+/* Estilo para a logo */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #830AD1; /* Cor roxa */
+}
