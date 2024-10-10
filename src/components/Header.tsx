@@ -11,8 +11,8 @@ const Header: React.FC = () => {
         <RouterLink to="/alimentacao">
           <span className='menu-item'>VA/VR</span>
         </RouterLink>
-        <RouterLink to="/relatorios">
-          <span className='menu-item'>Relatórios</span>
+        <RouterLink to="/colaboradores">
+          <span className='menu-item'>Colaboradores</span>
         </RouterLink>
       </nav>
     </header>

@@ -1,40 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import App from './App';
-import Login from '../src/components/Login';
-import Alimentacao from '../src/components/Alimentacao'
-import Relatorio from '../src/components/Relatorio'
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Employee from "./pages/Employee";
+import Login from "./pages/Login";
+import MealVoucher from "./pages/MealVoucher";
+import Home from "./pages/Home";
+import "./index.css";
 
 const theme = extendTheme({
   config: {
-    initialColorMode: 'dark',
+    initialColorMode: "dark",
     useSystemColorMode: false,
   },
   colors: {
     purple: {
-      500: '#9b59b6',
+      500: "#9b59b6",
     },
     black: {
-      500: '#111',
+      500: "#111",
     },
     white: {
-      500: '#fff',
+      500: "#fff",
     },
   },
 });
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/cadastro" element={<App />} />
-          <Route path="/alimentacao" element={<Alimentacao />} />
-          <Route path="/relatorios" element={<Relatorio />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/alimentacao" element={<MealVoucher />} />
+          <Route path="/colaboradores" element={<Employee />} />
         </Routes>
       </Router>
     </ChakraProvider>
