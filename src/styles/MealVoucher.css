@@ -1,0 +1,56 @@
+.alimentacao-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a202c;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.alimentacao-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.alimentacao-content {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.rmdp-input{
+  background-color: #0074d9;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s;
+
+}
+
+.rmdp-button {
+  background-color: #0074d9;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.meal-voucher-period-box {
+  border: 2px solid gray;
+  margin-top: 3%;
+}
+
+/* .meal-voucher-info-employee {
+   display: flex; 
+} */
