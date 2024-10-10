@@ -1,9 +1,9 @@
 import { Box, Button, useDisclosure, useToast } from "@chakra-ui/react";
 import React, { useState } from "react";
-import EmployeeList from "./components/EmployeeList";
-import EmployeeModal from "./components/EmployeeModal";
-import Header from "./components/Header";
-import "./App.css";
+import EmployeeList from "../components/EmployeeList";
+import EmployeeModal from "../components/EmployeeModal";
+import Header from "../components/Header";
+import "../styles/Home.css";
 
 interface Employee {
   nome: string;
@@ -20,7 +20,28 @@ const App: React.FC = () => {
   const toast = useToast();
 
   const handleAddEmployee = (newEmployee: Employee) => {
+    if (
+      !newEmployee.nome ||
+      !newEmployee.cpf ||
+      !newEmployee.setor ||
+      !newEmployee.jornada ||
+      !newEmployee.escala ||
+      !newEmployee.contrato
+    ) {
+      toast({
+        title: "Funcionário não registrado.",
+        description:
+          "Há campos inválidos. Preencha todos os campos obrigatórios.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+      onClose();
+      return;
+    }
+
     setEmployees([...employees, newEmployee]);
+
     toast({
       title: "Funcionário registrado.",
       description: `Funcionário ${newEmployee.nome} foi registrado com sucesso.`,

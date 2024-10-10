@@ -1,0 +1,38 @@
+.report-box {
+  display: flex;
+  border: 2px solid gray;
+  height: 60vh;
+  width: 70vw;
+  margin: auto;
+  margin-top: 3%;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.benefit-icon {
+  width: 20%
+}
+
+.benefit-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2p solid green
+}
+
+.benefit-box img,p {
+  margin:auto
+}
+
+.benefit-box img {
+  margin-bottom: 2.5%;
+}
+.benefit-box p:hover {
+  color: #885CD1;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
