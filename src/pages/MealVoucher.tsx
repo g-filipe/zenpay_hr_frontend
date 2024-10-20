@@ -4,8 +4,10 @@ import DatePicker from "react-multi-date-picker";
 import { Period } from "../types/types";
 import "../styles/MealVoucher.css";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const MealVoucher = () => {
+  const navigate = useNavigate();
   const [year, setYear] = useState(new Date().getFullYear());
   const [periods, setPeriods] = useState<Period[]>([]);
 
@@ -39,7 +41,7 @@ const MealVoucher = () => {
                     <strong>Custo Total</strong> {period.totalMealVoucher}
                   </Text>
                 </Flex>
-                <Button size="sm" /*onClick={() => toggleExpand(emp.nome)}*/>
+                <Button size="sm" onClick={() => navigate(`/relatorios/alimentacao/${period.period.replace('/','-')}`)}>
                   Ver relatório
                 </Button>
               </Flex>
@@ -105,92 +107,3 @@ function getPeriodsByYear(year: number) {
 }
 
 export default MealVoucher;
-
-{
-  /* <div>
-                  {period.employees.map((employee) => {
-                    return <div className="meal-voucher-info-employee">
-                      <div>
-                      <p><strong>Colaborador:</strong> {employee.name}</p>
-                      <p><strong>Setor:</strong> {employee.department}</p>
-                      <p><strong>VA/VR:</strong> {employee.mealVoucher}</p>
-                      <p><strong>Diária - 6h:</strong> {employee.voucher6h}</p>
-                      <p><strong>Diária - 8h:</strong> {employee.voucher8h}</p>
-                      <p><strong>Escalas Fim de Semana:</strong> {employee.workedWeekends?.length ? employee.workedWeekends.join(",") : 0}</p>
-                      <p><strong>Escala de Feriados: </strong>{employee.workedHolidays?.length ? employee.workedHolidays.join(",") : 0}</p>
-                      <p><strong>Faltas Injustificadas competência atual: </strong>{employee.unjustifiedAbsences?.length ? employee.unjustifiedAbsences.join(",") : 0}</p>
-                      <p><strong>Faltas Injustificadas competência anterior: </strong>{ employee.unjustifiedAbsencesPreviousMonth?.length ? employee.unjustifiedAbsencesPreviousMonth?.join(",") : 0}</p>
-                      <hr />
-                      </div>;
-                      </div>
-                  })}
-                </div> */
-}
-
-// employees: [
-//   {
-//     name: "João das Neves",
-//     department: "Vendas",
-//     mealVoucher: "944.40",
-//     voucher6h: 3,
-//     voucher8h: 24,
-//     workedHolidays: [12],
-//     workedWeekends: [5, 19, 27],
-//   },
-
-//   {
-//     name: "Amelia Silveira",
-//     department: "Suporte",
-//     mealVoucher: "944.40",
-//     voucher6h: 3,
-//     voucher8h: 24,
-//     workedHolidays: [12],
-//     workedWeekends: [5, 19, 27],
-//   },
-// ],
-
-// employees: [
-//   {
-//     name: "João das Neves",
-//     department: "Vendas",
-//     mealVoucher: "1944.40",
-//     voucher6h: 3,
-//     voucher8h: 24,
-//     workedHolidays: [12],
-//     workedWeekends: [5, 19, 27],
-//   },
-
-//   {
-//     name: "Amelia Silveira",
-//     department: "Suporte",
-//     mealVoucher: "2944.40",
-//     voucher6h: 4,
-//     voucher8h: 24,
-//     workedHolidays: [],
-//     workedWeekends: [5, 13, 19, 27],
-//   },
-
-{
-  /* <Box className="meal-voucher-period-box" style={{paddingTop: '2%'}}>
-        {periods.map((period) => {
-          return (
-            <div
-              style={{
-                border: "2px dashed red",
-                display: "flex",
-                marginBottom: "2%",
-                width: "60%",
-                justifyContent:'space-between',
-                paddingRight:'1%'
-              }}
-            >
-              <div style={{ alignSelf: "flex-end", border:'1px solid yellow' }}>Competência: {period.period}</div>
-              <div style={{ alignSelf: "flex-end", border:'1px solid white' }}>
-                Custo total: {period.totalMealVoucher}
-              </div>
-             
-            </div>
-          );
-        })}
-      </Box> */
-}

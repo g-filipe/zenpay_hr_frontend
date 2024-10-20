@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import EmployeeList from "../components/EmployeeList";
 import EmployeeModal from "../components/EmployeeModal";
 import Header from "../components/Header";
-import "../styles/Home.css";
+import "../styles/Employee.css";
 
 interface Employee {
   nome: string;

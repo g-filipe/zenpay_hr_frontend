@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import MealVoucher from "./pages/MealVoucher";
 import Home from "./pages/Home";
 import "./index.css";
+import Report from "./pages/Report";
 
 const theme = extendTheme({
   config: {
@@ -35,6 +36,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Route path="/" element={<Home />} />
           <Route path="/alimentacao" element={<MealVoucher />} />
           <Route path="/colaboradores" element={<Employee />} />
+          <Route path="/relatorios/alimentacao/:period" element={<Report />} />
         </Routes>
       </Router>
     </ChakraProvider>

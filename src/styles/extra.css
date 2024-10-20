@@ -1,0 +1,9 @@
+.newEmployeeBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.newEmployee {
+  margin-top: 1%;
+  margin-right: 0.4%;
+}

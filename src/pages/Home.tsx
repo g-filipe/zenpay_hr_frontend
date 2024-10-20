@@ -1,6 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 import Header from "../components/Header";
-import "../styles/Reports.css";
+import "../styles/Home.css";
 
 const Home: React.FC = () => {
   return (
