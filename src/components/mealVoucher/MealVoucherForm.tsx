@@ -1,7 +1,7 @@
 import { Box, Button, Grid, GridItem } from "@chakra-ui/react";
 import React, { useState } from "react";
 import EmployeeSelect from "./EmployeeSelect";
-// import PeriodInput from "./PeriodInput";
+import PeriodInput from "./PeriodInput";
 import DatePickerField from "./DatePickerField";
 import { MealVoucherInfo } from "../../types/types";
 
@@ -20,9 +20,7 @@ const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
 }) => {
   const [mealVoucher, setMealVoucher] = useState<MealVoucherInfo>({
     name: "",
-    // cpf: "",
     department: "",
-    // period: "",
     workedHolidays: [],
     unjustifiedAbsences: [],
     unjustifiedAbsencesPreviousMonth: [],
@@ -39,13 +37,12 @@ const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
     setMealVoucher((prevState) => ({ ...prevState, [field]: value }));
   };
 
-  const convertDaysToDates = (days: number[], year: number, month: number): Date[] => {
-    return days.map(day => new Date(year, month, day));
-  };
-
   const handleSubmit = () => {
     onSubmit(mealVoucher);
   };
+
+  const currentYear = new Date().getFullYear();
+  const currentMonth = new Date().getMonth();
 
   return (
     <Box>
@@ -68,7 +65,7 @@ const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
         <GridItem colSpan={2}>
           <DatePickerField
             label="Feriados Trabalhados"
-            selectedDates={convertDaysToDates(mealVoucher.workedHolidays, year, 0)}
+            selectedDates={convertDaysToDates(mealVoucher.workedHolidays, currentYear, currentMonth)}
             onChange={(dates) =>
               handleFieldChange("workedHolidays", dates.map(date => date.getDate()))
             }
@@ -78,7 +75,7 @@ const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
         <GridItem colSpan={2}>
           <DatePickerField
             label="Fins de Semana Trabalhados"
-            selectedDates={convertDaysToDates(mealVoucher.workedWeekends, year, 0)}
+            selectedDates={convertDaysToDates(mealVoucher.workedWeekends, currentYear, currentMonth)}
             onChange={(dates) =>
               handleFieldChange("workedWeekends", dates.map(date => date.getDate()))
             }
@@ -88,7 +85,7 @@ const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
         <GridItem colSpan={2}>
           <DatePickerField
             label="Faltas Injustificadas"
-            selectedDates={convertDaysToDates(mealVoucher.unjustifiedAbsences, year, 0)}
+            selectedDates={convertDaysToDates(mealVoucher.unjustifiedAbsences, currentYear, currentMonth)}
             onChange={(dates) =>
               handleFieldChange("unjustifiedAbsences", dates.map(date => date.getDate()))
             }
@@ -98,7 +95,7 @@ const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
         <GridItem colSpan={2}>
           <DatePickerField
             label="Faltas Injustificadas Competência Anterior"
-            selectedDates={convertDaysToDates(mealVoucher.unjustifiedAbsencesPreviousMonth, year, 0)}
+            selectedDates={convertDaysToDates(mealVoucher.unjustifiedAbsencesPreviousMonth, currentYear, currentMonth)}
             onChange={(dates) =>
               handleFieldChange("unjustifiedAbsencesPreviousMonth", dates.map(date => date.getDate()))
             }

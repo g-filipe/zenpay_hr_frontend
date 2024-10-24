@@ -5,11 +5,13 @@ import { MealVoucherInfo } from "../../types/types";
 
 interface MealVoucherModalProps {
   employees: { nome: string; cpf: string; setor: string }[];
+  isOpen: boolean;
+  onClose: () => void;
   onSubmit: (mealVoucher: MealVoucherInfo) => void;
 }
 
-const MealVoucherModal: React.FC<MealVoucherModalProps> = ({ employees, onSubmit }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+const MealVoucherModal: React.FC<MealVoucherModalProps> = ({ employees, onSubmit, isOpen, onClose }) => {
+
   // const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (mealVoucher: MealVoucherInfo) => {
@@ -20,10 +22,6 @@ const MealVoucherModal: React.FC<MealVoucherModalProps> = ({ employees, onSubmit
 
   return (
     <>
-      <Button onClick={onOpen} colorScheme="purple">
-        Abrir Formulário de Vales
-      </Button>
-
       <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
         <ModalContent>

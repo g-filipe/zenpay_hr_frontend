@@ -54,3 +54,8 @@
 .meal-voucher-info-employee {
    display: flex; 
 }
+
+.add-meal-voucher {
+  display: flex;
+  justify-content: flex-end;
+}
