@@ -55,12 +55,12 @@ const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
           />
         </GridItem>
 
-        {/* <GridItem colSpan={2}>
+        <GridItem colSpan={2}>
           <PeriodInput
             value={mealVoucher.period}
             onChange={(value) => handleFieldChange("period", value)}
           />
-        </GridItem> */}
+        </GridItem>
 
         <GridItem colSpan={2}>
           <DatePickerField

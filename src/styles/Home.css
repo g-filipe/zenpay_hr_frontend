@@ -1,5 +1,6 @@
 .report-box {
   display: flex;
+  flex-wrap: wrap;
   border: 2px solid gray;
   height: 60vh;
   width: 70vw;
@@ -16,9 +17,12 @@
 
 .benefit-box {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  border: 2p solid green
+  border: 2px solid green;
+  width: 33%;
+  justify-content: space-around;
 }
 
 .benefit-box img,p {

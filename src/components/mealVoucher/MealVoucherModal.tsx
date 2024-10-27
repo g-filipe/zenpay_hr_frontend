@@ -2,6 +2,7 @@ import React/*, { useState }*/ from "react";
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, useDisclosure } from "@chakra-ui/react";
 import MealVoucherForm from "./MealVoucherForm";
 import { MealVoucherInfo } from "../../types/types";
+import '../../styles/EmployeeModal.css'
 
 interface MealVoucherModalProps {
   employees: { nome: string; cpf: string; setor: string }[];
@@ -22,9 +23,9 @@ const MealVoucherModal: React.FC<MealVoucherModalProps> = ({ employees, onSubmit
 
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxW={"700px"}>
           <ModalHeader>Cadastrar Vale Alimentação</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
@@ -32,9 +33,7 @@ const MealVoucherModal: React.FC<MealVoucherModalProps> = ({ employees, onSubmit
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="purple" onClick={onClose}>
-              Fechar
-            </Button>
+
           </ModalFooter>
         </ModalContent>
       </Modal>

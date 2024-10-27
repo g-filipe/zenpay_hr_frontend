@@ -35,6 +35,14 @@ const Home: React.FC = () => {
             />
             <p>Passaporte Real</p>
           </div>
+          <div className="benefit-box">
+            <img
+              className="benefit-icon"
+              src="src/assets/add-employee.png"
+              alt="meal-voucher"
+            />
+            <p>Colaboradores</p>
+          </div>
         </div>
       </body>
     </Box>
