@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import EmployeeSelect from "./EmployeeSelect";
 import PeriodInput from "./PeriodInput";
 import DatePickerField from "./DatePickerField";
-import { MealVoucherInfo } from "../../types/types";
+import { Employee } from "../../types/types";
 
 const convertDaysToDates = (days: number[], year: number, month: number): Date[] => {
   return days.map(day => new Date(year, month, day));
@@ -11,14 +11,14 @@ const convertDaysToDates = (days: number[], year: number, month: number): Date[]
 
 interface MealVoucherFormProps {
   employees: { nome: string; cpf: string; setor: string }[];
-  onSubmit: (mealVoucher: MealVoucherInfo) => void;
+  onSubmit: (mealVoucher: Employee) => void;
 }
 
 const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
   employees,
   onSubmit,
 }) => {
-  const [mealVoucher, setMealVoucher] = useState<MealVoucherInfo>({
+  const [mealVoucher, setMealVoucher] = useState<Employee>({
     name: "",
     department: "",
     workedHolidays: [],
@@ -30,9 +30,9 @@ const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
     voucher8h: 0,
   });
 
-  const handleFieldChange = <K extends keyof MealVoucherInfo>(
+  const handleFieldChange = <K extends keyof Employee>(
     field: K,
-    value: MealVoucherInfo[K]
+    value: Employee[K]
   ) => {
     setMealVoucher((prevState) => ({ ...prevState, [field]: value }));
   };
@@ -52,13 +52,6 @@ const MealVoucherForm: React.FC<MealVoucherFormProps> = ({
             employees={employees}
             value={mealVoucher.name}
             onChange={(value) => handleFieldChange("name", value)}
-          />
-        </GridItem>
-
-        <GridItem colSpan={2}>
-          <PeriodInput
-            value={mealVoucher.period}
-            onChange={(value) => handleFieldChange("period", value)}
           />
         </GridItem>
 

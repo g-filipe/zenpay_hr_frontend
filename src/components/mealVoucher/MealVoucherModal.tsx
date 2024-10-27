@@ -1,21 +1,33 @@
-import React/*, { useState }*/ from "react";
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, useDisclosure } from "@chakra-ui/react";
-import MealVoucherForm from "./MealVoucherForm";
-import { MealVoucherInfo } from "../../types/types";
-import '../../styles/EmployeeModal.css'
+import React /*, { useState }*/ from 'react';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react';
+import MealVoucherForm from './MealVoucherForm';
+import { Employee } from '../../types/types';
+import '../../styles/EmployeeModal.css';
 
 interface MealVoucherModalProps {
   employees: { nome: string; cpf: string; setor: string }[];
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (mealVoucher: MealVoucherInfo) => void;
+  onSubmit: (mealVoucher: Employee) => void;
 }
 
-const MealVoucherModal: React.FC<MealVoucherModalProps> = ({ employees, onSubmit, isOpen, onClose }) => {
-
+const MealVoucherModal = ({
+  employees,
+  onSubmit,
+  isOpen,
+  onClose,
+}) => {
   // const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (mealVoucher: MealVoucherInfo) => {
+  const handleSubmit = (mealVoucher: Employee) => {
     onSubmit(mealVoucher);
     // setSubmitted(true); // Marca como enviado após o submit
     onClose(); // Fecha o modal após o envio
@@ -25,16 +37,14 @@ const MealVoucherModal: React.FC<MealVoucherModalProps> = ({ employees, onSubmit
     <>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent maxW={"700px"}>
+        <ModalContent maxW="700px">
           <ModalHeader>Cadastrar Vale Alimentação</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <MealVoucherForm employees={employees} onSubmit={handleSubmit} />
           </ModalBody>
 
-          <ModalFooter>
-
-          </ModalFooter>
+          <ModalFooter></ModalFooter>
         </ModalContent>
       </Modal>
     </>

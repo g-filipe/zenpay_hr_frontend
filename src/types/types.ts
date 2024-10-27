@@ -1,8 +1,7 @@
-export interface MealVoucherInfo {
+export interface Employee {
   name: string;
   // cpf?: string;
   department: string;
-  // period?: string;
   workedHolidays: number[];
   workedWeekends: number[];
   unjustifiedAbsences: number[];
@@ -13,7 +12,7 @@ export interface MealVoucherInfo {
 }
 
 export type Period = {
-  period: string,
-  totalMealVoucher: string,
-  employees: MealVoucherInfo[]
-}
+  period: string;
+  totalMealVoucher: string;
+  employees?: Employee[];
+};

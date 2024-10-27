@@ -5,7 +5,6 @@ import "../styles/Report.css";
 import PieChartComponent from "../components/PieChart";
 import { useState } from "react";
 import { formatForBrazilianReal } from "../utils/formatterforBrazilianReal";
-import MealVoucherModal from "../components/mealVoucher/MealVoucherModal";
 
 const totalCost = 35855.23;
 const departments = [

@@ -1,23 +1,25 @@
-import { Box, Button, Collapse, Flex, Text, useDisclosure } from "@chakra-ui/react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaEdit, FaRegEdit, FaUserPlus } from "react-icons/fa";
-import { IoPeopleOutline } from "react-icons/io5";
+import { Box, Button, Flex, Text } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
+import { Period } from '../../types/types';
+import { FaUserEdit } from 'react-icons/fa';
+import { TbReportSearch } from 'react-icons/tb';
 
-const PeriodItem = ({ period, onOpenAddEmployee }) => {
+type PeriodItemProps = {
+  period: Period;
+};
+
+const PeriodItem = ({ period }: PeriodItemProps) => {
   const navigate = useNavigate();
-  const [show, setShow] = useState(false);
 
-  const handleToggle = () => setShow(!show);
+  const periodStr = period.period.replace('/', '-');
+
+  const urlEditPeriod = `/alimentacao/${periodStr}`;
+  const urlReport = `/alimentacao/${periodStr}/relatorio`;
 
   return (
     <Box mb={4} p={4} borderWidth="1px" borderRadius="md">
       <Flex justifyContent="space-between" alignItems="center">
         <Flex gap={8}>
-          <Button onClick={handleToggle} size="sm">
-            {show ? "-" : "+"}
-          </Button>
-
           <Text>
             <strong>Competência</strong> {period.period}
           </Text>
@@ -26,26 +28,19 @@ const PeriodItem = ({ period, onOpenAddEmployee }) => {
           </Text>
         </Flex>
         {/* <FaRegEdit size="1.3em"/> */}
-        <Flex gap={8}>
-          <Button onClick={onOpenAddEmployee}>
-            <FaUserPlus />
+        <Flex gap={6}>
+          <Button onClick={() => navigate(urlEditPeriod)} size="sm">
+            <Flex gap={1.5} alignItems="center">
+              <FaUserEdit /> Colaboradores
+            </Flex>
           </Button>
-          <Button
-            size="sm"
-            onClick={() =>
-              navigate(
-                `/relatorios/alimentacao/${period.period.replace("/", "-")}`
-              )
-            }
-          >
-            Ver relatório
+          <Button size="sm" onClick={() => navigate(urlReport)}>
+            <Flex gap={1.5} alignItems="center">
+              <TbReportSearch /> Relatório
+            </Flex>
           </Button>
         </Flex>
       </Flex>
-      <Collapse in={show}>
-        e aew!
-        <Box mt={4}></Box>
-      </Collapse>
     </Box>
   );
 };
