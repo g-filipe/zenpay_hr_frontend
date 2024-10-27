@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <Heading as="h1" size="lg" mb={4} style={{ marginTop: "3%" }}>
         Relatórios de Pagamento
       </Heading>
-      <body>
+      <div>
         <div className="report-box">
           <div className="benefit-box">
             <img
@@ -44,7 +44,7 @@ const Home: React.FC = () => {
             <p>Colaboradores</p>
           </div>
         </div>
-      </body>
+      </div>
     </Box>
   );
 };
