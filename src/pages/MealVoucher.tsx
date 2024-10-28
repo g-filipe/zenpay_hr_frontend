@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import DatePicker from 'react-multi-date-picker';
 import { Period } from '../types/types';
-import { Box, Button, useDisclosure } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
 import PeriodItem from '../components/mealVoucher/Period';
 import '../styles/MealVoucher.css';
 

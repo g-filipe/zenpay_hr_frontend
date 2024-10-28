@@ -1,42 +1,41 @@
-.report-box {
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid gray;
-  height: 60vh;
-  width: 70vw;
-  margin: auto;
-  margin-top: 3%;
+.home-box {
+  height: 80vh;
+  width: 90vw;
+  margin-left: 0.5%;
+  margin-top: 5%;
   align-items: center;
-  justify-content: space-between;
-  
 }
 
-.benefit-icon {
-  width: 20%
-}
-
-.benefit-box {
+.content-box {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  border: 2px solid green;
-  width: 33%;
-  justify-content: space-around;
-}
-
-.benefit-box img,p {
-  margin:auto
-}
-
-.benefit-box img {
+  border-radius: 28px;
+  align-items: center;
+  margin-left: 0.3%;
+  height: 100px;
+  padding-left: 1.2%;
   margin-bottom: 2.5%;
-}
-.benefit-box p:hover {
-  color: #885CD1;
-  cursor: pointer;
+  width: 60%;
+  box-shadow: 0 20px 30px 15px rgba(0, 0, 0, 0.3), 0 10px 15px -3px rgba(0, 0, 0, 0.15);
 }
 
-h1 {
-  text-align: center;
+.content-box img {
+  width: 70px;
+  margin-right: 40px;
+}
+
+.content-box p {
+  font-size: 1.3rem;
+  color: #e4dfdf8e;
+  margin: 0;
+}
+
+.content-box:hover {
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(136, 92, 209, 1);
+}
+
+.content-box:hover p {
+  /* color: #885cd1; */
+  color:#ffffffca;
+  cursor: pointer;
 }
