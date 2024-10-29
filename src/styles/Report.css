@@ -1,35 +1,24 @@
-.report-box1 {
-  height: 75vh;
-  width: 90vw;
+.meal-voucher-report-box {
+  width: 95%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   margin: auto;
   margin-top: 3%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.meal-voucher-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 2%;
   padding-bottom: 2%;
   border-radius: 10px;
-  /* border: 1px solid yellow; */
+  border: 1px solid gray;
   box-shadow: 0 20px 30px 15px rgba(0, 0, 0, 0.3), 0 10px 15px -3px rgba(0, 0, 0, 0.15);
 }
 
 .show-report {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width:100%;
-  padding-left: 2%;
+  padding: 2%;
   padding-right: 2%;
   padding-top: 3%;
   font-size: 1.5rem;
@@ -41,18 +30,35 @@ li {
 }
 
 .department {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   margin-left: 2%;
+  border-left: 0.1rem solid;
+  width: 30%;
   font-size: 1.3rem;
-  line-height: 200%;
 }
 
-.department-cost-label {
-  margin-bottom: 0%;
-  font-size: 1.5rem;
+department-cost-info-box {
+ margin-left: 44%;
 }
 
-div .css-8laair {
-  border:none;
-  border-left:1px solid gray;
-  border-radius: 0%;
+.department-cost-title {
+  margin: auto;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  justify-content: space-around;
+  height: 30%;
+  align-items: center;
+}
+
+.button-box Button {
+  width: 60%;
 }
