@@ -1,0 +1,41 @@
+.meal-voucher-department-report-box {
+  width: 95%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 3%;
+
+  border-radius: 10px;
+  border: 1px solid gray;
+  box-shadow: 0 20px 30px 15px rgba(0, 0, 0, 0.3), 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+}
+
+.show-report-employee {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2%;
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+  /* border: 1px solid blue */
+}
+
+.department-employee-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  border-left: 2px solid #830AD1;
+  width: 100%;
+  height: 70%;
+  font-size: 1.3rem;
+}
+
+.employee-select {
+  margin-top: 10px;
+}

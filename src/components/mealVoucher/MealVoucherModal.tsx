@@ -30,7 +30,7 @@ const MealVoucherModal = ({
   const handleSubmit = (mealVoucher: Employee) => {
     onSubmit(mealVoucher);
     // setSubmitted(true); // Marca como enviado após o submit
-    onClose(); // Fecha o modal após o envio
+    onClose();
   };
 
   return (

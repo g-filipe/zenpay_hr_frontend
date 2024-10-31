@@ -17,7 +17,6 @@ const MealVoucher = () => {
   return (
     <>
       <Header />
-      {/* <h1>Gerenciamento de Vales Alimentação</h1> */}
       <Box p="0 1%">
         <DatePicker
           value={new Date(year, 0, 1)}

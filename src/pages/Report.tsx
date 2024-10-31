@@ -1,10 +1,10 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
-import { Box, Heading, Text, VStack, Button } from '@chakra-ui/react';
-import '../styles/Report.css';
+import { Box, Text, VStack, Button } from '@chakra-ui/react';
 import PieChartComponent from '../components/PieChart';
-import { useState } from 'react';
 import { formatForBrazilianReal } from '../utils/formatterforBrazilianReal';
+import '../styles/Report.css';
 
 const totalCost = 35855.23;
 const departments = [

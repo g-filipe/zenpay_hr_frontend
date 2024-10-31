@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import './index.css';
 import Report from './pages/Report';
 import EditMealVoucherPeriod from './pages/EditPeriod';
+import ReportPerDepartment from './pages/ReportPerDepartmentMealVoucher';
 
 const theme = extendTheme({
   config: {
@@ -37,6 +38,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/colaboradores" element={<Employee />} />
         <Route path="/alimentacao/:period/relatorio" element={<Report />} />
         <Route path="/alimentacao/:period" element={<EditMealVoucherPeriod />} />
+        <Route path="/alimentacao/:period/details" element={<ReportPerDepartment />} />
       </Routes>
     </Router>
   </ChakraProvider>
